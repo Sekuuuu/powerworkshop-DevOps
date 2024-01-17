@@ -24,5 +24,5 @@ docker-compose up -d
 
 Output
 
-![Host output](./Assignment_Output/Hosted Site.png)
+![Host output](./Assignment_Output/Hosted_Site.png)
 ![Workflow output](./Assignment_Output/github_workflow.png)
