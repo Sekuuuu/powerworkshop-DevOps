@@ -1,35 +1,22 @@
 # php-hello-world
 A simple hello-world for composer
 
- [![Latest Stable Version](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)
- [![Latest Stable Version](https://poser.pugx.org/silarhi/hello-world/v/stable)](https://packagist.org/packages/silarhi/hello-world)
-[![Total Downloads](https://poser.pugx.org/silarhi/hello-world/downloads)](https://packagist.org/packages/silarhi/hello-world)
-[![License](https://poser.pugx.org/silarhi/hello-world/license)](https://packagist.org/packages/silarhi/hello-world)
-
-
-[![SymfonyInsight](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807/big.svg)](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807)
-
 Installation
 ------------
 
 Install with composer
 ``` bash
-composer require silarhi/hello-world
+composer install
 ```
 
-Run composer update
+Build docker image
 ``` bash
-composer update silarhi/hello-world
+docker build -t phpdocker .
+docker run -dp 0.0.0.0:3000:80 phpdocker
 ```
 
-Usage
------
-
-``` php
-require_once __DIR__ . '/vendor/autoload.php';
-
-use Silarhi\Hello;
-
-$hello = new Hello();
-echo $hello->display() . "\n";
+OR use docker-compose
+```
+docker-compose build
+docker-compose up -d
 ```
