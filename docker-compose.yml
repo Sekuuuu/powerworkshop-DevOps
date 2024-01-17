@@ -1,0 +1,19 @@
+version: '3'
+services:
+  php-dockercompose:
+    image: php:7.4-apache
+    container_name: php-docker-compose
+    working_dir: /var/www/html
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/var/www/html
+    command: ["apache2-foreground"]
+    depends_on:
+      - composer-install
+
+  composer-install:
+    image: composer:2
+    command: ["install"]
+    volumes:
+      - .:/var/www/html

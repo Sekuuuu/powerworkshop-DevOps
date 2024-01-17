@@ -1,3 +1,8 @@
+#Steps for running the application
+
+#Run composer for vendorfile
+composer install
+
 #Use the Dockerfile to build and run the container with proper port connection and name according to you
 docker build -t phpdocker .
 docker run -dp 0.0.0.0:3000:80 phpdocker
