@@ -20,3 +20,7 @@ OR use docker-compose
 docker-compose build
 docker-compose up -d
 ```
+
+
+Output
+![Host output](./Assignment_Output/github_workflow.png)
